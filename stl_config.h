@@ -33,16 +33,13 @@
 
 // Flags:
 //编译器是否支持bool为内置类型
-// * __STL_NO_BOOL: defined if the compiler doesn't have bool as a builtin
-//   type.
+// * __STL_NO_BOOL: defined if the compiler doesn't have bool as a builtin type.
 //编译器是否支持wchar_t为内置类型
 // * __STL_HAS_WCHAR_T: defined if the compier has wchar_t as a builtin type.
 //如果不支持drand48(采用了48bit计算，产生双精度的伪随机数)，则定义
-// * __STL_NO_DRAND48: defined if the compiler doesn't have the drand48 
-//   function.
+// * __STL_NO_DRAND48: defined if the compiler doesn't have the drand48 function.
  //如果不支持类模板的静态成员，则定义
-// * __STL_STATIC_TEMPLATE_MEMBER_BUG: defined if the compiler can't handle
-//   static members of template classes.
+// * __STL_STATIC_TEMPLATE_MEMBER_BUG: defined if the compiler can't handle static members of template classes.
 // * __STL_STATIC_CONST_INIT_BUG: defined if the compiler can't handle a
 //   constant-initializer in the declaration of a static const data member
 //   of integer type.  (See section 9.4.2, paragraph 4, of the C++ standard.)
@@ -149,6 +146,7 @@
 #     define __STL_UITHREADS
 # endif
 
+//使用 SGI STL但却不是使用 GNU C++
 # if defined(__sgi) && !defined(__GNUC__)
 #   include <standards.h>
 #   if !defined(_BOOL)
